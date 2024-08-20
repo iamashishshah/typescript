@@ -5,7 +5,7 @@ function addTwo(num) {
     return num + 2;
 }
 // so the whole idea of ts was to not make mistakes like this and ts is allowing us to do this thing
-// console.log(addTwo("343.5"))
+console.log(addTwo("343.5"));
 // so the best practice is here
 function addThree(num) {
     return num + 3;
@@ -56,12 +56,11 @@ var result = addTen(10);
 // console.log(yourValue)
 function consoleError(errormsg) {
     if (errormsg === void 0) { errormsg = "Provide error"; }
-    console.log(errormsg);
+    // console.log(errormsg)
 }
 // void means nothing:  
 // never means, function is never going to return anything
-consoleError("Log in first to log out.");
+// consoleError("Log in first to log out.");
 function handleError(error) {
     throw new Error(error);
 }
-console.log(handleError("testing it"));

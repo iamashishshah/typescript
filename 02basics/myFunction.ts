@@ -4,12 +4,12 @@ function addTwo(num){
 }
 
 // so the whole idea of ts was to not make mistakes like this and ts is allowing us to do this thing
-
-// console.log(addTwo("343.5"))
+// so when we don't implify parameter, then it takes as any data type
+// console.log(addTwo(343.5))
 
 
 // so the best practice is here
-function addThree(num: number){
+function addThree(num: number): number{
     return num + 3;
 }
 // this is the good practice
@@ -34,7 +34,7 @@ function userSignUp(name: string, email: string, isPaid: boolean){
 }
 userSignUp("Ashish", "ashish@lco.dev", true)
 
-let userlogin = (name: string, email: string, isLoggedIn: boolean = true) => {  // if you don't pass anything this will be your default value
+let userlogin = (name: string, email: string, isLoggedIn: boolean = true) : boolean => {  // if you don't pass anything this will be your default value
     return isLoggedIn;
 }
 userlogin("Ashish Shah", "ashish@ashish.com")
@@ -72,15 +72,15 @@ let result = addTen(10)
 
 
 function consoleError(errormsg: string = "Provide error") : void{
-    console.log(errormsg)
+    // console.log(errormsg)
 }
 
 // void means nothing:  
 // never means, function is never going to return anything
-consoleError("Log in first to log out.");
+// consoleError("Log in first to log out.");
 
 function handleError (error: string) : never{
     throw new Error(error)
 }
-console.log(handleError("testing it"))
+// console.log(handleError("testing it"))
 export{}
